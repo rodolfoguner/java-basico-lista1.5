@@ -12,7 +12,14 @@ public class Main {
 		int maior = retornaValor(valores, "maior");
 		int menor = retornaValor(valores, "menor");
 
+		System.out.println("O menor valor é: " + menor);
+		System.out.println("O maior valor é: " + maior);
 		
+		if (maior > 50) {
+			System.out.println("Valor muito alto.");
+		} else {
+			System.out.println("Valor normal.");
+		}
 	}
 	
 	private int[] lerValores() {
@@ -45,7 +52,5 @@ public class Main {
 		default:
 			return -1;
 		}
-	}
-	
-	
+	}	
 }
