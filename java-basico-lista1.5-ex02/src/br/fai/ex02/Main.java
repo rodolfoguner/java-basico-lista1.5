@@ -8,7 +8,10 @@ public class Main {
 	}
 	private void start() {
 		int soma[] = lerValores();
-		// int media = calculaMedia();
+		int media = calculaMedia(soma[0], soma[1]);
+		
+		System.out.println("Soma: " + soma[0]);
+		System.out.println("Media: " + media);
 	}
 	
 	private int[] lerValores() {
@@ -33,6 +36,10 @@ public class Main {
 		}
 		
 		return valores;
+	}
+	
+	private int calculaMedia(int soma, int qtd_valores) {
+		return soma / qtd_valores;
 	}
 	
 }
