@@ -9,7 +9,10 @@ public class Main {
 	}
 	private void start() {
 		int valores[] = lerValores();
+		int maior = retornaValor(valores, "maior");
+		int menor = retornaValor(valores, "menor");
 
+		
 	}
 	
 	private int[] lerValores() {
@@ -23,4 +26,26 @@ public class Main {
 		
 		return valores;
 	}
+	
+	private int retornaValor(int valores[], String opcao) {
+		int maior = -1;
+		int menor = 2147483647;
+		
+		for (int valor: valores) {
+			maior = Math.max(maior, valor);
+			menor = Math.min(menor, valor);
+		}
+		
+		switch (opcao) {
+		case "maior": {
+			return maior;
+		}case "menor": {
+			return menor;
+		}
+		default:
+			return -1;
+		}
+	}
+	
+	
 }
