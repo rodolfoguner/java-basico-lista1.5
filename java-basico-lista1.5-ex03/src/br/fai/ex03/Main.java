@@ -10,6 +10,16 @@ public class Main {
 	
 	private void start() {
 		String palavra[] = lerPalavra();
+		int tamPalavra = palavra.length;
+		String palavraInvertida = inverterPalavra(palavra, tamPalavra);
+		
+		System.out.print("Por caractere: ");
+		for (String letra: palavraInvertida.split("")) {
+			System.out.print(letra);
+		}
+		
+		System.out.println("\nString: " + palavraInvertida);
+		
 	}
 	
 	private String[] lerPalavra() {
@@ -20,5 +30,16 @@ public class Main {
 		palavra = scanner.nextLine();
 		
 		return palavra.split("");
+	}
+	
+	private String inverterPalavra(String palavra[], int tam) {
+		
+		String palavraInvertida = "";
+		
+		for (int i = tam; i > 0; i--) {
+			palavraInvertida += palavra[i - 1];
+		}
+		
+		return palavraInvertida;
 	}
 }
